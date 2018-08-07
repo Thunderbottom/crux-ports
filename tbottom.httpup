@@ -1,0 +1,6 @@
+#
+# /etc/ports/tbottom.httpup: Thunderbottom's port collection
+#
+
+ROOT_DIR=/usr/ports/tbottom
+URL=https://raw.githubusercontent.com/Thunderbottom/crux-ports/master

@@ -1,0 +1,16 @@
+# Description: 	Telegram, the secure IM platform.
+# URL: 		http://www.telegram.org
+# Maintainer:  	thunderbottom, https://github.com/thunderbottom/crux-ports/issues
+# Depends on:
+
+name=telegram
+version=1.3.10
+release=1
+source=(https://github.com/telegramdesktop/tdesktop/releases/download/v$version/tsetup.$version.tar.xz)
+
+build() {
+	cd Telegram
+
+	install -Dm755 Telegram $PKG/usr/bin/telegram
+	install -Dm755 Updater $PKG/usr/bin/updater
+}

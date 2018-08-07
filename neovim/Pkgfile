@@ -1,0 +1,23 @@
+# Description: Vim fork focused on extensibility and agility.
+# URL:         https://neovim.io
+# Maintainer:  thunderbottom, https://github.com/thunderbottom/crux-ports/issues
+# Depends on:  libuv msgpack-c lua-lpeg libmpack libvterm libtermkey
+
+name=neovim
+version=0.3.1
+release=1
+source=(https://github.com/$name/$name/archive/v$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	mkdir build ; cd build
+
+	cmake .. \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_INSTALL_PREFIX=/usr
+
+	make DESTDIR=$PKG install
+
+	rm -rf $PKG/usr/share/locale
+}
