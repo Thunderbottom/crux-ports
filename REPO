@@ -1,4 +1,14 @@
+d:jemalloc
 d:telegram
 d:neovim
+d:noto-fonts
+f:b892b630d2d0d85aa75bda4f4c01c237:jemalloc/0003-Add-minimal-initialized-tsd.patch
+f:cb535543486157eb3e2904c355bc5960:jemalloc/0002-clear-tcache_ql-after-fork-in-child.patch
+f:f328ad3f18639438d2c9611785562118:jemalloc/0001-only-abort-on-dlsym-when-necessary.patch
+f:124cbaff36df22a9ecf36f2bebc450e9:jemalloc/Pkgfile
+f:b94cb60dfddb39846048259d3972de39:telegram/.md5sum
 f:45e3389dc5ed4001c8e225f5f245806b:telegram/Pkgfile
+f:44b27e5f0934aff79220eabfcde8f6d1:telegram/.footprint
 f:d6e99cdec0bb71abd6216d29b0377fb9:neovim/Pkgfile
+f:078474825e2a9db20b44299ea4ef943e:tbottom.httpup
+f:fe6da8b1d9fdc33a8ed66b49bb798a4b:noto-fonts/Pkgfile
