@@ -1,0 +1,19 @@
+# Description: Noto fonts
+# URL: https://www.google.com/get/noto/
+# Maintainer: thunderbottom, https://github.com/Thunderbottom/crux-ports/issues
+# Depends on:
+
+name=noto-fonts-cjk
+version=1.0
+release=1
+commit=32a5844539f2e348ed36b44e990f9b06d7fb89fe
+source=(
+https://github.com/googlei18n/noto-cjk/archive/$commit.tar.gz
+70-noto-cjk.conf
+)
+
+build() {
+	install -Dm 644 noto-cjk-*/*.ttc -t "${PKG}/usr/share/fonts/noto-cjk"
+	install -Dm 644 noto-cjk-*/LICENSE -t "${PKG}/usr/share/licenses/noto-fonts-cjk"
+	install -Dm 644 "${SRC}"/70-noto-cjk.conf -t "${PKG}/etc/fonts/conf.avail"
+}

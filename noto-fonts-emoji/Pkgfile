@@ -1,0 +1,17 @@
+# Description: Noto fonts
+# URL: https://www.google.com/get/noto/
+# Maintainer: thunderbottom, https://github.com/Thunderbottom/crux-ports/issues
+# Depends on:
+
+name=noto-fonts-emoji
+version=20180425
+release=1
+commit=0447355ade750dd92d759b97fcbfaa546394556b
+source=(
+https://github.com/googlei18n/noto-emoji/archive/$commit.tar.gz
+)
+
+build() {
+	install -Dm 644 noto-emoji-*/fonts/NotoColorEmoji.ttf -t "${PKG}/usr/share/fonts/noto-emoji"
+	install -Dm 644 noto-emoji-*/LICENSE -t "${PKG}/usr/share/licenses/noto-fonts-emoji"
+}

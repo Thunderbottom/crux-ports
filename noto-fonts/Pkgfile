@@ -3,20 +3,22 @@
 # Maintainer: thunderbottom, https://github.com/Thunderbottom/crux-ports/issues
 # Depends on:
 
-name=font-noto
+name=noto-fonts
 version=1.0
 release=1
+commit=b207fc31b093948dfc6d77b47042ce2f335bc631
 source=(
-https://noto-website-2.storage.googleapis.com/pkgs/NotoMono-hinted.zip
-https://noto-website-2.storage.googleapis.com/pkgs/NotoSans-hinted.zip
-https://noto-website-2.storage.googleapis.com/pkgs/NotoSerif-hinted.zip
-https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip
-https://noto-website-2.storage.googleapis.com/pkgs/NotoColorEmoji-unhinted.zip
+https://github.com/googlei18n/noto-fonts/archive/$commit.tar.gz
+66-noto-mono.conf
+66-noto-sans.conf
+66-noto-serif.conf
 )
 
 build() {
-	install -d $PKG/usr/share/fonts/Noto
-    for i in *.ttf;
-        do install -m644 $i $PKG/usr/share/fonts/Noto;
-    done
+	cd $name-$commit
+
+	install -Dm 644 unhinted/Noto*.tt[fc] -t "${PKG}/usr/share/fonts/noto"
+	install -Dm 644 hinted/Noto*.tt[fc] -t "${PKG}/usr/share/fonts/noto"
+	install -Dm 644 LICENSE -t "${PKG}/usr/share/licenses/noto-fonts"
+	install -Dm 644 "${SRC}"/*.conf -t "${PKG}/etc/fonts/conf.avail"
 }
