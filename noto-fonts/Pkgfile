@@ -4,7 +4,7 @@
 # Depends on:
 
 name=noto-fonts
-version=1.0
+version=20180322
 release=1
 commit=b207fc31b093948dfc6d77b47042ce2f335bc631
 source=(

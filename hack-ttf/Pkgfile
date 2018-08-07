@@ -1,0 +1,14 @@
+# Description: A typeface designed for source code
+# URL:         https://sourcefoundry.org/hack
+# Maintainer:  jmf, https://github.com/jmf/jmf/issues
+# Depends on:  
+
+name=hack-ttf
+version=3.003
+release=1
+source=(https://github.com/source-foundry/Hack/releases/download/v$version/Hack-v$version-ttf.zip)
+
+build(){
+	mkdir -p $PKG/usr/share/fonts/X11/TTF
+	install -Dm755 ttf/*  $PKG/usr/share/fonts/X11/TTF
+}

@@ -4,7 +4,7 @@
 # Depends on:
 
 name=noto-fonts-cjk
-version=1.0
+version=20170601
 release=1
 commit=32a5844539f2e348ed36b44e990f9b06d7fb89fe
 source=(

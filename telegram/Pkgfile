@@ -1,6 +1,6 @@
-# Description: 	Telegram, the secure IM platform.
-# URL: 		http://www.telegram.org
-# Maintainer:  	thunderbottom, https://github.com/thunderbottom/crux-ports/issues
+# Description: Telegram, the secure IM platform.
+# URL: http://www.telegram.org
+# Maintainer: thunderbottom, https://github.com/thunderbottom/crux-ports/issues
 # Depends on:
 
 name=telegram
